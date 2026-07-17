@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { HashRouter as BrowserRouter, Routes, Route, Link, useParams, useNavigate, useLocation } from 'react-router-dom'
 import { parseLyricsLine } from './chordParser'
-import { Search, ArrowLeft, Plus, Minus, Eye, EyeOff, Home, Heart, Star, Settings } from 'lucide-react'
+import { Search, ArrowLeft, Plus, Minus, Eye, EyeOff, Home, Heart, Star, Settings, BookOpen } from 'lucide-react'
 import { SONGS } from './songsData'
 
 const CATEGORY_OPTIONS = [
@@ -68,30 +68,48 @@ function useAppSettings() {
 function BottomNav() {
   const location = useLocation()
 
-  if (location.pathname.includes('/song/')) return null
-
   return (
-    <div className="bottom-nav">
-      <Link to="/" className={`nav-item ${location.pathname === '/' ? 'active' : ''}`}>
-        <Home size={24} />
+    <nav className="bottom-nav">
+      <Link
+        to="/"
+        className={`nav-item ${location.pathname === '/' ? 'active' : ''}`}
+      >
+        <Home size={22} />
         <span>Inicio</span>
       </Link>
 
-      <Link to="/favoritos" className={`nav-item ${location.pathname === '/favoritos' ? 'active' : ''}`}>
-        <Heart size={24} />
+      <Link
+        to="/favoritos"
+        className={`nav-item ${location.pathname === '/favoritos' ? 'active' : ''}`}
+      >
+        <Heart size={22} />
         <span>Favoritos</span>
       </Link>
 
-      <Link to="/especiales" className={`nav-item ${location.pathname === '/especiales' ? 'active' : ''}`}>
-        <Star size={24} />
+      <Link
+        to="/especiales-himnario"
+        className={`nav-item ${location.pathname === '/especiales-himnario' ? 'active' : ''}`}
+      >
+        <BookOpen size={22} />
+        <span>Esp. Himnario</span>
+      </Link>
+
+      <Link
+        to="/especiales"
+        className={`nav-item ${location.pathname === '/especiales' ? 'active' : ''}`}
+      >
+        <Star size={22} />
         <span>Especiales</span>
       </Link>
 
-      <Link to="/ajustes" className={`nav-item ${location.pathname === '/ajustes' ? 'active' : ''}`}>
-        <Settings size={24} />
+      <Link
+        to="/ajustes"
+        className={`nav-item ${location.pathname === '/ajustes' ? 'active' : ''}`}
+      >
+        <Settings size={22} />
         <span>Ajustes</span>
       </Link>
-    </div>
+    </nav>
   )
 }
 
@@ -99,21 +117,23 @@ function SongList({ title, filterType, favoritesList }) {
   const [search, setSearch] = useState('')
   const [category, setCategory] = useState('Todas')
 
-  const songsForSection = SONGS.filter(song => {
-    if (filterType === 'all' && song.isSpecial) {
-      return false
-    }
+const songsForSection = SONGS.filter(song => {
+  if (filterType === 'all' && song.isSpecial) return false
 
-    if (filterType === 'favorites' && (!favoritesList || !favoritesList.includes(song.id))) {
-      return false
-    }
+  if (filterType === 'favorites' && (!favoritesList || !favoritesList.includes(song.id))) {
+    return false
+  }
 
-    if (filterType === 'specials' && !song.isSpecial) {
-      return false
-    }
+  if (filterType === 'hymnal-specials') {
+    return song.isSpecial && song.specialType === 'himnario'
+  }
 
-    return true
-  })
+  if (filterType === 'specials') {
+    return song.isSpecial && (song.specialType === 'especial' || !song.specialType)
+  }
+
+  return true
+})
 
   const availableCategories = CATEGORY_OPTIONS.filter(cat =>
     songsForSection.some(song => song.category === cat)
@@ -650,56 +670,70 @@ function App() {
   }, [settings.theme])
 
   return (
-    <BrowserRouter>
-      <div className="app-container">
-        <Routes>
-          <Route
-            path="/"
-            element={<SongList title="Himnario IPREC" filterType="all" />}
-          />
+<BrowserRouter>
+  <div className="app-container">
+    <Routes>
+      <Route
+        path="/"
+        element={<SongList title="Himnario IPREC" filterType="all" />}
+      />
 
-          <Route
-            path="/favoritos"
-            element={
-              <SongList
-                title="Mis Favoritos"
-                filterType="favorites"
-                favoritesList={favorites}
-              />
-            }
+      <Route
+        path="/favoritos"
+        element={
+          <SongList
+            title="Mis Favoritos"
+            filterType="favorites"
+            favoritesList={favorites}
           />
+        }
+      />
 
-          <Route
-            path="/especiales"
-            element={<SongList title="Coros Especiales" filterType="specials" />}
+      <Route
+        path="/especiales-himnario"
+        element={
+          <SongList
+            title="Especiales de Himnario"
+            filterType="hymnal-specials"
           />
+        }
+      />
 
-          <Route
-            path="/ajustes"
-            element={
-              <SettingsPage
-                settings={settings}
-                updateSettings={updateSettings}
-              />
-            }
+      <Route
+        path="/especiales"
+        element={
+          <SongList
+            title="Especiales"
+            filterType="specials"
           />
+        }
+      />
 
-          <Route
-            path="/song/:id"
-            element={
-              <SongViewer
-                favorites={favorites}
-                toggleFavorite={toggleFavorite}
-                settings={settings}
-              />
-            }
+      <Route
+        path="/ajustes"
+        element={
+          <SettingsPage
+            settings={settings}
+            updateSettings={updateSettings}
           />
-        </Routes>
+        }
+      />
 
-        <BottomNav />
-      </div>
-    </BrowserRouter>
+      <Route
+        path="/song/:id"
+        element={
+          <SongViewer
+            favorites={favorites}
+            toggleFavorite={toggleFavorite}
+            settings={settings}
+          />
+        }
+      />
+    </Routes>
+
+    <BottomNav />
+  </div>
+</BrowserRouter>
   )
 }
-
 export default App

@@ -959,3 +959,29 @@ body {
 .song-list-header .filter-select {
   justify-self: end;
 }
+/* ===== BARRA INFERIOR CON 5 APARTADOS ===== */
+
+.bottom-nav {
+  grid-template-columns: repeat(5, 1fr) !important;
+}
+
+.nav-item {
+  font-size: 0.68rem;
+  gap: 0.2rem;
+}
+
+.nav-item svg {
+  width: 20px;
+  height: 20px;
+}
+
+@media (max-width: 420px) {
+  .nav-item {
+    font-size: 0.62rem;
+  }
+
+  .nav-item svg {
+    width: 19px;
+    height: 19px;
+  }
+}
