@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { BrowserRouter, Routes, Route, Link, useParams, useNavigate, useLocation } from 'react-router-dom'
+import { HashRouter as BrowserRouter, Routes, Route, Link, useParams, useNavigate, useLocation } from 'react-router-dom'
 import { parseLyricsLine } from './chordParser'
 import { Search, ArrowLeft, Plus, Minus, Eye, EyeOff, Home, Heart, Star, Settings } from 'lucide-react'
 import { SONGS } from './songsData'
