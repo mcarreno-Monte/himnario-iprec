@@ -722,10 +722,8 @@ ESTROFA 1
 
 [D]Firmes y [G]adelante, [D]huestes [Em]de la [A7]fe. [D]
 [G]Sin temor [F#m]alguno, [Em]que Jesús [A7]nos [D]ve.
-
 [Em]Jefe soberano, [D]Cristo al frente va.
-[Am7]Y la [D7]regia [G]enseña,
-[F#m]tremo[Em]landa [A]está.
+[Am7]Y la [D7]regia [G]enseña, [F#m]tremo[Em]landa [A]está.
 
 CORO
 
@@ -5938,7 +5936,7 @@ F, G, Em, Am, F, G, Am
 
 {
   id: 803,
-  number: 4,
+  number: 3,
   title: 'Honra y gloria a ti',
   key: 'Re mayor (D)',
   time: '4 tiempos',
@@ -6014,7 +6012,7 @@ CORO`
 
 {
   id: 804,
-  number: 5,
+  number: 3,
   title: 'Grande es tu amor',
   key: 'Do mayor (C)',
   time: '4 tiempos',

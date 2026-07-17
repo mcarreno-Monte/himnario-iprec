@@ -660,10 +660,8 @@ ESTROFA 1
 
 [D]Firmes y [G]adelante, [D]huestes [Em]de la [A7]fe. [D]
 [G]Sin temor [F#m]alguno, [Em]que Jesús [A7]nos [D]ve.
-
 [Em]Jefe soberano, [D]Cristo al frente va.
-[Am7]Y la [D7]regia [G]enseña,
-[F#m]tremo[Em]landa [A]está.
+[Am7]Y la [D7]regia [G]enseña, [F#m]tremo[Em]landa [A]está.
 
 CORO
 
@@ -4460,7 +4458,7 @@ F, G, Em, Am, F, G, Am
 [F]Recibe toda la honra
 [C]Precioso, Hijo de [G]Dios
 
-[Am]Hijo de Dios`},{id:803,number:4,title:"Honra y gloria a ti",key:"Re mayor (D)",time:"4 tiempos",category:"Adoración",isSpecial:!0,specialType:"especial",artist:"SAG-2022",lyrics:`INTRODUCCIÓN
+[Am]Hijo de Dios`},{id:803,number:3,title:"Honra y gloria a ti",key:"Re mayor (D)",time:"4 tiempos",category:"Adoración",isSpecial:!0,specialType:"especial",artist:"SAG-2022",lyrics:`INTRODUCCIÓN
 
 D, G, D, C, Em, Bm, A, D, G, Gm, D
 
@@ -4523,7 +4521,7 @@ FINAL
 [Bm]Porque Tú eres digno de [F#m]honra y gloria
 [G]Todo mi canto y alabanza es para [C]Ti, para [A]Ti.
 
-CORO`},{id:804,number:5,title:"Grande es tu amor",key:"Do mayor (C)",time:"4 tiempos",category:"Adoración",isSpecial:!0,specialType:"especial",artist:"SAG-2022",lyrics:`INTRODUCCIÓN
+CORO`},{id:804,number:3,title:"Grande es tu amor",key:"Do mayor (C)",time:"4 tiempos",category:"Adoración",isSpecial:!0,specialType:"especial",artist:"SAG-2022",lyrics:`INTRODUCCIÓN
 
 C, F7+, Am, G, F, G
 
