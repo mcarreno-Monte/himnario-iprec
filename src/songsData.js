@@ -705,54 +705,58 @@ Que al cielo Santo consagré,
 Hoy sé mi vínculo de honor,`
   },
   {
-    id: 85,
-    number: 85,
-    title: 'Firmes y adelante',
-    key: 'Mi mayor (E)',
-    time: '2 tiempos',
-    category: 'General',
-    isSpecial: false,
-    artist: 'Himnario Pentecostal',
-    lyrics: `ESTROFA 1
+  id: 85,
+  number: 85,
+  title: 'Firmes y Adelante',
+  key: 'Re mayor (D)',
+  time: '2 tiempos',
+  category: 'Congregacional',
+  isSpecial: false,
+  specialType: 'especial',
+  artist: 'Himanario Pentecostal',
+  lyrics: `INTRODUCCIÓN
 
-¡Firmes y adelante!
-Huestes de la fe,
-Sin temor alguno,
-Que Jesús nos ve.
-Jefe Soberano
-Cristo al frente va,
-Y la regia enseña
-Tremolando está.
+D, Bm7, Em7, A7, D
+
+ESTROFA 1
+
+[D]Firmes y [G]adelante, [D]huestes [Em]de la [A7]fe. [D]
+[G]Sin temor [F#m]alguno, [Em]que Jesús [A7]nos [D]ve.
+
+[Em]Jefe soberano, [D]Cristo al frente va.
+[Am7]Y la [D7]regia [G]enseña,
+[F#m]tremo[Em]landa [A]está.
 
 CORO
 
-Firmes y adelante
-Huestes de la fe.
-Sin temor alguno,
-Que Jesús nos ve.
+[D]Firmes y [Em]adelante [A]huestes de la [D]fe,
+[Bm7]Sin temor [Em]alguno [A]que Jesús nos [D]ve.
+
+INTRODUCCIÓN
+
+D, Bm7, Em7, A7, D
 
 ESTROFA 2
 
-Al sagrado nombre
-De nuestro adalid,
-Tiembla el enemigo
-Y huye de la lid.
-Nuestra es la victoria
-Dad a Dios loor;
-Y óigalo el averno
-Lleno de pavor.
+Al Sagrado nombre de nuestro Adalid,
+Tiembla el enemigo y huye de la lid.
+Nuestra es la victoria, dad a Dios loor,
+Y óigalo el averno, lleno de pavor.
 
 ESTROFA 3
 
-Muévase potente
-La Iglesia de Dios;
-De los ya gloriosos
-Marchamos en pos.
-Somos sólo un cuerpo,
-Y uno es el Señor,
-Una la Esperanza,
-Y uno nuestro Amor.`
-  },
+Muévase potente la Iglesia de Dios,
+De los ya gloriosos, marchemos en pos,
+Somos sólo un cuerpo, y uno es el Señor,
+Una la esperanza, y uno nuestro amor.
+
+ESTROFA 4
+
+Tronos y coronas pueden perecer,
+De Jesús la Iglesia fiel habrá de ser,
+Nada en contra suya, prevalecerá,
+Porque la promesa nunca faltará.`
+},
   {
     id: 86,
     number: 86,
@@ -5730,4 +5734,391 @@ No habrá sed ni el sol fatigará,
 En el mar las olas amenazan
 Y sobre ellas majestuoso tú andarás.`
   },
+  {
+  id: 800,
+  number: 1,
+  title: 'Siempre estuviste ahí',
+  key: 'Fa mayor (F)',
+  time: '4 tiempos',
+  category: 'Devocional',
+  isSpecial: true,
+  specialType: 'especial',
+  artist: 'Coros Unidos',
+  lyrics: `INTRODUCCIÓN
+
+F, C, Dm, Am/C, Bbsus2, C
+
+ESTROFA 1
+
+A tus plantas vengo hoy
+Anhelo que vengas a mí,
+Necesito solo un momento
+Volverte a sentir… mi Señor
+
+[F]Me alejé sin saber,
+[Dm]Que esperando estabas por [Am/C]mí
+[Bbsus2]Y a pesar de mi error,
+[F]Siempre has estado aquí,
+[Csus4]Nunca has fallado [A7]Señor.
+
+[Dm]Fuiste tú quien rompió las cadenas,
+[Am7]Es tu amor que cambió mi existencia
+[Bb]Y me libertó de las [Gm7]tinieblas
+[Ebmaj7]Que me alejaban de [C]ti
+
+CORO
+
+[F]Pero siempre estuviste ahí,
+[C]No me olvidaste
+[Bb]Jamás me has dejado Señor,
+[F/C]Me amaste a [C]mí
+
+[F]Si de algo te sirvo Señor,
+[C]Toma mi vida
+[Bb]A cada instante mi Dios,
+[F/A]Te quiero [F]servir
+
+[Gm7]Solo a [C]ti
+[F]Mi Señor
+
+INTERLUDIO
+
+C, Dm, Bbsus2, F, C, Bbsus2, C
+
+ESTROFA 2
+
+[F]Lo que yo soy,
+[Dm]Es gracias a tu [Am/C]amor
+[Bbsus2]Has tomado mi vida,
+[F]Sin merecerlo
+[Csus4]Me has elegido
+
+[F]No me sueltes por favor,
+[Dm]De tus manos oh mi [Am/C]Señor
+[Bbsus2]En tus brazos quiero estar
+[F]Poder abrazarte
+[Csus4]Cuando no pueda [A7]seguir
+
+[Dm]Eres tú quien camina a mi lado
+[Am7]Me alienta y pude encontrar
+[F7]Las fuerzas que desgastadas [Bb]habían
+[Gm7]Para alejarme de [Ebmaj7]ti [C]
+
+CORO
+
+[F]Pero siempre estuviste ahí,
+[C]No me olvidaste
+[Bb]Jamás me has dejado Señor,
+[F/C]Me amaste a [C]mí
+
+[F]Si de algo te sirvo Señor,
+[C]Toma mi vida
+[Bb]A cada instante mi Dios,
+[F/A]Te quiero [F]servir
+
+[Gm7]Solo a [C]ti
+[F]Mi [Gm/E]Señor [A7]
+
+SOLO SAXO
+
+Dm, C, Bbsus2, F, C, A7, Dm, Bbsus2, F, Cadd9, D, Csus4
+
+PUENTE
+
+Siempre estuviste ahí… Cuando nada había
+Siempre estuviste ahí… En mi alegría
+Siempre has estado aquí… Siempre has estado
+
+[Cadd9]Se[D]ñor
+
+[G]Siempre estuviste ahí,
+[D]No me olvidaste
+[G7]Jamás me has dejado [C]Señor,
+[G]Me amaste a [Am]mí
+
+[D]Si de algo te sirvo [G]Señor,
+[D]Toma mi vida
+[G7]A cada instante mi [C]Dios,
+[G]Te quiero servir
+
+[Am]Solo a [Dsus4]ti [D]
+[G]Mi [F]Señor…
+[Cadd9]Mi [G]Señor`
+},
+
+{
+  id: 801,
+  number: 2,
+  title: 'Medley: Aleluya, Tú mereces, Creo en ti',
+  key: 'La mayor (A)',
+  time: '4 tiempos',
+  category: 'Medley',
+  isSpecial: true,
+  specialType: 'especial',
+  artist: 'Coros Unidos',
+  lyrics: `ALELUYA
+
+INTRODUCCIÓN
+
+A
+
+1° Piano, saxo.
+2° Piano, saxo, mandolinas.
+Entra solo bajo y teclado.
+
+[A]Aleluya, [D]Aleluya nuestro Dios poderoso [A]es
+[A]Aleluya, [D]Aleluya nuestro Dios poderoso [A]es
+
+[D]Alelu[E]-[F#m]u-[E]ya,
+[A]Sa[E]-[A]a-nto, Santo
+
+[F#m7]Nuestro Dios es [E]Poderoso
+[D]Digno de alabar digno de exaltar
+[E]Él es [A]santo, [E]santo [A]
+
+[F#m7]Nuestro Dios es [E]Poderoso
+[D]Digno de alabar digno de exaltar
+[A]Amén.
+
+FINAL
+
+F - E7
+
+TÚ MERECES
+
+[A]Tú mereces la [C#m]gloria y el honor
+[D]Y mi [E]adora[A]ción
+
+[A]Yo postrado traigo a [C#m]ti mi corazón
+[D]Bendiciéndo[E]te. [A] [F#m]
+
+[F#m]Oh altísimo, [C#m]majestuoso [D]Dios
+[Bm]Reinas con [E]poder [F#m]
+
+[F#m]Tú eres santo, [C#m]quien como [D]tú
+[Bm]Oh Jeho[E]vá.
+
+CORO
+
+[A]Solo a [A7]ti bendeci[D]ré
+[B7]Bendeciré tu [E]nombre
+
+[C#]Bendito [C#7]eres [F#m]Tú, [E]
+[D]Bendito [E]eres [A]Tú.
+
+[Bm7] [E7]Para repetir coro
+Mi para repetir estrofa
+
+CREO EN TI
+
+INTRODUCCIÓN
+
+F, G, Em, Am, F, G, Am
+
+[Am]Quiero levantar a ti mis [F]manos
+[C]Maravilloso Jesús, milagroso [G]Señor
+
+[Am]Llena este lugar de tu [F]presencia
+[C]Y haz descender tu poder, a los que estamos [G]aquí
+
+[Am]Creo en [G]ti… Je[F]sús
+[Am]Y lo que [G]harás… en [F]mí
+[C]En [G]mí, en [Am]mí
+
+[Am]Recibe toda la gloria
+[F]Recibe toda la honra
+[C]Precioso, Hijo de [G]Dios
+
+[Am]Recibe toda la gloria
+[F]Recibe toda la honra
+[C]Precioso, Hijo de [G]Dios
+
+[Am]Hijo de Dios`
+},
+
+{
+  id: 803,
+  number: 4,
+  title: 'Honra y gloria a ti',
+  key: 'Re mayor (D)',
+  time: '4 tiempos',
+  category: 'Adoración',
+  isSpecial: true,
+  specialType: 'especial',
+  artist: 'SAG-2022',
+  lyrics: `INTRODUCCIÓN
+
+D, G, D, C, Em, Bm, A, D, G, Gm, D
+
+ESTROFA 1
+
+[A]Hay que comprender que la [F#m]gloria es para [Bm]Dios,
+[Am]Que no hay otro como [D7]Él. ¡Él es [G]Dios! [A7]¡Él es el [D]Rey! [Gm]
+
+[D]Que, si no es por [F#m7]Él, no estaría yo a[Bm]quí,
+[Am]No sabría yo [D7]reír; ni cantar [G]podría [A]yo. [D] [Am]
+
+[D7]La gloria es de [G]Él, ¡sólo para [F#m]Él! [Bm]
+[Em]Y si hoy canto es porque quiero de[A7]cir.
+
+CORO
+
+[D]Que toda la [Em]gloria, [F#m]gloria es para Dios.
+[Am]No hay otro como [B7]Él, un Dios crea[Em]dor.
+
+[G]Hizo los mares, el [A]cielo y la tierra,
+[Em]Formó los [G]montes y también a [A]mí.
+
+[D]¡Oh gloria, [Em]gloria! Yo ensalzo tu [F#m]Nombre;
+[Am]Bendito seas [B7]Tú por tu amor sin [Em]fin.
+
+[D]Yo alabo y [G]engrandezco tu [F#m]Nombre. [Bm]
+[Em]Y la gloria a [A]Ti, la gloria a [D]Ti, ¡sólo a Ti!
+
+INTRODUCCIÓN
+
+D, G, D, C, Em, Bm, A, D, G, Gm, D
+
+ESTROFA 2
+
+[A]No puedes negar lo que ha [F#m]hecho Él por [Bm]ti,
+[Am]Mostrando su [D7]poder en toda su [G]inmensi[A7]dad. [D] [Gm]
+
+[D]Porque, en los momentos de [F#m7]mayor dificul[Bm]tad
+[Am]Ha llegado con su [D7]mano, no dejándote [G]caer. [A] [D] [Am]
+
+[D7]La gloria es de [G]Él, ¡y se la [F#m]merece! [Bm]
+[Em]Y si hoy canto es porque vuelvo a de[A7]cir.
+
+CORO
+
+[D]Que toda la [Em]gloria, [F#m]gloria es para Dios.
+[Am]No hay otro como [B7]Él, un Dios crea[Em]dor.
+
+[G]Hizo los mares, el [A]cielo y la tierra,
+[Em]Formó los [G]montes y también a [A]mí.
+
+[D]¡Oh gloria, [Em]gloria! Yo ensalzo tu [F#m]Nombre;
+[Am]Bendito seas [B7]Tú por tu amor sin [Em]fin.
+
+[D]Yo alabo y [G]engrandezco tu [F#m]Nombre. [Bm]
+[Em]Y la gloria a [A]Ti, la gloria a [D]Ti, ¡sólo a Ti!
+
+FINAL
+
+[Bm]Porque Tú eres digno de [F#m]honra y gloria
+[G]Todo mi canto y alabanza es para [C]Ti, para [A]Ti.
+
+CORO`
+},
+
+{
+  id: 804,
+  number: 5,
+  title: 'Grande es tu amor',
+  key: 'Do mayor (C)',
+  time: '4 tiempos',
+  category: 'Adoración',
+  isSpecial: true,
+  specialType: 'especial',
+  artist: 'SAG-2022',
+  lyrics: `INTRODUCCIÓN
+
+C, F7+, Am, G, F, G
+
+ESTROFA 1
+
+[C]Cambiaste mi [F]existencia con tu [C]amor
+[C]Le diste [F]esperanza a mi [G]ser…
+[Am]solo puedo [G]agrade[F]cer
+
+[C]Señor pues fuiste [G]tú quien me escogió…
+[C]Tu mirada me [F]conquistó,
+[C]tu manto de amor me [F]cubrió
+
+[C]Tu sangre preciosa mi [F]vida cambió,
+[C]y no puedo [G]vivir
+[Am]Sin tu [G]amor...
+
+CORO
+
+[C]Porque tu amor es más [G]fuerte,
+Mis manos alza[Am]ré
+
+[G]Reconociendo que eres el [F]Rey,
+Nada se compara a [C]lo
+
+[G]inmenso de tu [Am]amor,
+Cordero Santo [G]Fiel y Verda[F]dero
+
+[C]En la oscuri[F]dad,
+brilla tu ver[G]dad… [C]
+
+INTRODUCCIÓN
+
+C, C7+, F7+, C, Bb, F, Fm
+
+ESTROFA 2
+
+[C]Grande es tu [F]amor venciste la [C]muerte por [Bb]mí
+[C]no puedo hacer [F]más que rendirme a [C]ti, [G] [C]
+Digno eres de adoración…
+
+CORO
+
+[C]Tu amor es más [G]fuerte,
+Mis manos alza[Am]ré
+
+[G]Reconociendo que eres el [F]Rey,
+Nada se compara a [C]lo
+
+[G]inmenso de tu [Am]amor,
+Cordero Santo [G]Fiel y Verda[F]dero
+
+[C]En la oscuri[F]dad,
+brilla tu ver[G]dad… [C]
+
+VARIACIÓN
+
+Solo voces y piano x2
+
+[G]Dios no hay nadie como tú,
+Junto a mí estás
+
+[G]Dios no hay nadie como tú,
+Junto a mí estás
+
+[C]Dios no hay nadie como [F]tú,
+Junto a mí esta[G]rás…
+
+VARIACIÓN
+
+Am, G, D, Fm, Dm, Em, F, G
+
+CORO FINAL
+
+[C]Porque tu amor es más [G]fuerte,
+Mis manos alza[Am]ré
+
+[G]Reconociendo que eres el [F]Rey,
+Nada se compara a [C]lo
+
+[G]inmenso de tu [Am]amor,
+Cordero Santo [G]Fiel y Verda[F]dero
+
+[C]Porque tu amor es más [G]fuerte,
+Mis manos alza[Am]ré
+
+[G]Reconociendo que eres el [F]Rey,
+Nada se compara a [C]lo
+
+[G]inmenso de tu [Am]amor,
+Cordero Santo [G]Fiel y Verda[F]dero
+
+FINAL
+
+[C]En la oscuri[F]dad,
+[Am]en la oscuri[Bb]dad…
+[G]brilla tu ver[C]dad…`
+},
 ]
