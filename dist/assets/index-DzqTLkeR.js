@@ -4521,7 +4521,7 @@ FINAL
 [Bm]Porque Tú eres digno de [F#m]honra y gloria
 [G]Todo mi canto y alabanza es para [C]Ti, para [A]Ti.
 
-CORO`},{id:804,number:3,title:"Grande es tu amor",key:"Do mayor (C)",time:"4 tiempos",category:"Adoración",isSpecial:!0,specialType:"especial",artist:"SAG-2022",lyrics:`INTRODUCCIÓN
+CORO`},{id:804,number:4,title:"Grande es tu amor",key:"Do mayor (C)",time:"4 tiempos",category:"Adoración",isSpecial:!0,specialType:"especial",artist:"SAG-2022",lyrics:`INTRODUCCIÓN
 
 C, F7+, Am, G, F, G
 
