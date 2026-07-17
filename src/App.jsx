@@ -142,19 +142,29 @@ const filteredSongs = songsForSection
 
   return (
     <>
-      <div className="header">
-        <h1>{title}</h1>
+<div className="header song-list-header">
+  <div className="header-spacer"></div>
 
-        <select
-          className="filter-select"
-          value={category}
-          onChange={(e) => setCategory(e.target.value)}
-        >
-          {categories.map(c => (
-            <option key={c} value={c}>{c}</option>
-          ))}
-        </select>
-      </div>
+  <div className="main-title-with-logo">
+    <img
+      src={`${import.meta.env.BASE_URL}logo.png`}
+      alt="Logo"
+      className="app-logo"
+    />
+
+    <h1>{title}</h1>
+  </div>
+
+  <select
+    className="filter-select"
+    value={category}
+    onChange={(e) => setCategory(e.target.value)}
+  >
+    {categories.map(c => (
+      <option key={c} value={c}>{c}</option>
+    ))}
+  </select>
+</div>
 
       <div className="main-content">
         <div className="search-container">
