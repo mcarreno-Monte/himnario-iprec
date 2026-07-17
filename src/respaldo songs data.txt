@@ -1,0 +1,122 @@
+export const SONGS = [
+  {
+    id: 1,
+    number: 1,
+    title: 'Cuan Grande es Él',
+    category: 'Congregacional',
+    isSpecial: false,
+    artist: 'Himno Clásico',
+    lyrics: `Señor mi [Sol]Dios, al contemplar los [Do]cielos
+El firma[Sol]mento y las [Re]estrellas [Sol]mil
+Al oír tu [Sol]voz en los potentes [Do]truenos
+Y ver bri[Sol]llar al [Re]sol en su ce[Sol]nit
+
+[Sol]Mi corazón en[Do]tona la can[Sol]ción
+¡Cuán grande es [Re]Él! ¡Cuán grande es [Sol]Él!
+[Sol]Mi corazón en[Do]tona la can[Sol]ción
+¡Cuán grande es [Re]Él! ¡Cuán grande es [Sol]Él!`
+  },
+  {
+    id: 2,
+    number: 2,
+    title: 'Amazing Grace (Sublime Gracia)',
+    category: 'Devocional',
+    isSpecial: true,
+    artist: 'Himno Clásico',
+    lyrics: `A[Sol]mazing grace, how [Do]sweet the [Sol]sound
+That saved a [Sol]wretch like [Re]me
+I [Sol]once was lost, but [Do]now I'm [Sol]found
+Was [Sol]blind, but [Re]now I [Sol]see`
+  },
+  {
+    id: 3,
+    number: 3,
+    title: "Eterno redentor",
+    category: 'Predicación',
+    isSpecial: false,
+    artist: "IPREC",
+    lyrics: `[Rem]Jesús, él es [Lam]mi salva[Sib]dor,
+[Rem]su vida [Lam]dio en la cruz por [Sib]mi
+[Rem]no impor[Lam]tándole el do[Sib]lor, 
+[Rem]El con su [Lam]sangre me com[Sib]pró
+[Fa]
+De pies y manos clavado, 
+[Do] [Lam]
+el crucificado fue, 
+[Sib] [La7] [Rem]
+y una lanza su costado traspasó
+
+Coro:
+[Do7] [Fa]
+En el calvario Jesucristo se inmoló 
+[Rem] [Do]
+Por amor a mi
+[Sib] [Solm] 
+grande precio que pagó, mis pecados
+[Sib] [La7] [Do]
+y culpas lavó
+[Do7] [Fa] 
+pero al tercer día con poder se levantó,
+[Lam] [Do]
+venciendo a la muerte
+[Sib] 
+sacrificio perfecto, 
+[Solm] [Sib] [La7] [Rem]
+que hizo Jesús por mi`
+  },
+  {
+    id: 4,
+    number: 85,
+    title: "Firmes y Adelante",
+    category: 'General',
+    isSpecial: false,
+    artist: "IPREC",
+    lyrics: `Tono: RE (D) / 2 Tiempos
+INTRODUCCIÓN: [Re] [Sol] [Fa#m] [Sim] [Mim7] [La7] [Re]
+
+[Re] Firmes y a[Sol]de[Re]lante, [Mim] huestes de la fe. [La7] [Re]
+[Sol] [Fa#m] [Mim] Sin temor alguno, que Jesús [La7] nos ve. [Re]
+[Mim] Jefe soberano, [Re] Cristo [Lam7] al frente [Re7] va. [Sol]
+[Mim] Y la regia enseña, [La] tremolanda está. [Sim7]
+
+CORO:
+[Re] Firmes y adelante huestes [Mim] de la fe, [La] [Re]
+[Sol] [Fa#m] [Sim] [Mim] Sin temor alguno que Jesús [La7] nos ve. [Re]
+
+INTRODUCCIÓN: [Re] [Sol] [Fa#m] [Sim] [Mim7] [La7] [Re] [Mim7]
+
+II
+Al Sagrado nombre de nuestro Adalid,
+Tiembla el enemigo y huye de la lid.
+Nuestra es la victoria, dad a Dios loor,
+Y óigalo el averno, lleno de pavor.
+
+III
+Muévase potente la Iglesia de Dios,
+De los ya gloriosos, marchemos en pos,
+Somos sólo un cuerpo, y uno es el Señor,
+Una la esperanza, y uno nuestro amor.
+
+IV
+Tronos y coronas pueden perecer,
+De Jesús la Iglesia fiel habrá de ser,
+Nada en contra suya, prevalecerá,
+Porque la promesa nunca faltará.`
+  },
+  {
+    id: 5,
+    number: 5,
+    title: "Medley te alabaran",
+    category: 'Coritos',
+    isSpecial: false,
+    artist: "IPREC",
+    lyrics: `Tono: Lam (Am) / 4 Tiempos
+INTRODUCCIÓN: [Lam] [Sol] [Fa] [Rem] [Mi] [Lam]
+
+[Lam] //Te alabarán los cielos y la tierra [Sol]
+[Fa] Te alabarán el sol y la luna
+[Rem] Te alabarán todas tus criaturas// [Mi]
+[Lam] [Sol] //Padre abre las ventanas de los cielos// [Fa] [Rem] [Mi]
+[Lam] [Sol] //Y derrama, y derrama, sobre nosotros tu poder// [Fa] [Rem] [Mi] [Lam]`
+  }
+];

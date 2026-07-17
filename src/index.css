@@ -1,0 +1,914 @@
+:root {
+  --bg-primary: #070B19;
+  --bg-secondary: #0F172A;
+  --bg-card: #1E293B;
+  --text-primary: #F8FAFC;
+  --text-secondary: #94A3B8;
+  --accent: #D4AF37;
+  --accent-hover: #FCD34D;
+  --chord-color: #FBBF24;
+  --danger: #ef4444;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+.app-container {
+  max-width: 600px;
+  margin: 0 auto;
+  min-height: 100vh;
+  background-color: var(--bg-primary);
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 70px;
+  position: relative;
+}
+
+.header {
+  padding: 1.5rem;
+  background-color: var(--bg-secondary);
+  border-bottom: 1px solid var(--bg-card);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header h1 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.main-content {
+  padding: 1.5rem;
+  flex: 1;
+}
+
+/* Song List */
+.search-container {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.search-input {
+  flex: 1;
+  padding: 1rem 1.5rem;
+  padding-left: 3rem;
+  border-radius: 12px;
+  border: none;
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  font-size: 1rem;
+  outline: none;
+  transition: box-shadow 0.2s;
+  width: 100%;
+}
+
+.search-input:focus {
+  box-shadow: 0 0 0 2px var(--accent);
+}
+
+.filter-select {
+  padding: 0 1rem;
+  border-radius: 12px;
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 0.9rem;
+}
+
+.song-item {
+  padding: 1.25rem;
+  background-color: var(--bg-secondary);
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.2s;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  gap: 1rem;
+}
+
+.song-item:hover {
+  transform: translateY(-2px);
+  background-color: var(--bg-card);
+}
+
+.song-number {
+  background-color: var(--bg-card);
+  color: var(--accent);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.song-details {
+  flex: 1;
+}
+
+.song-details h2 {
+  font-size: 1.1rem;
+  margin-bottom: 0.25rem;
+  color: var(--text-primary);
+}
+
+.song-details p {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.category-badge {
+  background-color: var(--bg-primary);
+  padding: 0.1rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  color: var(--accent);
+}
+
+/* Controls */
+.controls-bar {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  background-color: var(--bg-secondary);
+  padding: 0.75rem;
+  border-radius: 12px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.btn {
+  background-color: var(--bg-card);
+  color: var(--text-primary);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: background-color 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btn:hover {
+  background-color: var(--accent);
+  color: #070B19;
+}
+
+.transpose-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.transpose-value {
+  font-weight: 700;
+  min-width: 2rem;
+  text-align: center;
+}
+/* Lyrics */
+.lyrics {
+  font-size: 1.1rem;
+  width: 100%;
+  white-space: normal;
+}
+
+/* Cada línea escrita en songsData.js */
+.chord-line-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  width: 100%;
+  margin-bottom: 0.9rem;
+  line-height: 1.25;
+  gap: 0;
+  column-gap: 0;
+  row-gap: 0.25rem;
+}
+
+/* Espacio real entre palabras */
+.space-group {
+  display: inline-block;
+  width: 0.16em;
+  flex-shrink: 0;
+}
+
+/* Cada fragmento de letra */
+.word-group {
+  position: relative;
+  display: inline-block;
+  flex-shrink: 0;
+  padding-top: 1.25rem;
+  margin: 0;
+  white-space: nowrap;
+}
+
+/* Acordes flotando arriba sin separar la palabra */
+.chord-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: var(--chord-color);
+  font-weight: 800;
+  font-size: 0.95rem;
+  line-height: 1.1rem;
+  white-space: nowrap;
+  text-align: left;
+}
+
+/* Cuando no hay acorde, no muestra nada */
+.empty-chord {
+  display: none;
+}
+
+/* Letra */
+.lyric-text {
+  color: var(--text-primary);
+  font-size: 1.1rem;
+  line-height: 1.35;
+  white-space: nowrap;
+  text-align: left;
+}
+
+/* Títulos como ESTROFA, CORO, FINAL, etc. */
+.section-title {
+  display: block;
+  width: 100%;
+  margin: 1.4rem 0 0.8rem 0;
+  color: var(--text-primary);
+  font-size: 1.1rem;
+  font-weight: 800;
+  letter-spacing: 0.08rem;
+  text-transform: uppercase;
+}
+
+/* Espacio entre secciones */
+.lyric-spacer {
+  height: 0.7rem;
+}
+/* Une mejor los fragmentos de una misma palabra cuando hay acordes al medio */
+.chord-line-container .word-group + .word-group {
+  margin-left: -0.36em;
+}
+/* Bottom Navigation */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  max-width: 600px;
+  background-color: var(--bg-secondary);
+  border-top: 1px solid var(--bg-card);
+  display: flex;
+  justify-content: space-around;
+  padding: 0.75rem 0;
+  z-index: 50;
+  padding-bottom: calc(0.75rem + env(safe-area-inset-bottom));
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 0.75rem;
+  transition: color 0.2s;
+  flex: 1;
+}
+
+.nav-item.active {
+  color: var(--accent);
+}
+
+.favorite-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s;
+}
+
+.favorite-btn.active {
+  color: var(--danger);
+}
+
+.favorite-btn:hover {
+  transform: scale(1.1);
+}
+/* ===== LETRA Y ACORDES DEL HIMNARIO ===== */
+
+.lyrics {
+  font-size: 1.1rem;
+  width: 100%;
+  white-space: normal;
+}
+
+/* Cada línea escrita en songsData.js */
+.chord-line-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  width: 100%;
+  margin-bottom: 0.85rem;
+  line-height: 1.25;
+  column-gap: 0.25rem;
+  row-gap: 0.15rem;
+}
+
+/* Cada palabra con su acorde encima */
+.word-group {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  white-space: nowrap;
+  margin-right: 0.15rem;
+}
+
+/* Acordes */
+.chord-label {
+  color: var(--chord-color);
+  font-weight: 800;
+  font-size: 0.95rem;
+  min-height: 1.25rem;
+  line-height: 1.25rem;
+  white-space: nowrap;
+}
+
+/* Cuando no hay acorde, deja el espacio pero no muestra nada */
+.empty-chord {
+  visibility: hidden;
+}
+
+/* Letra */
+.lyric-word,
+.lyric-text {
+  color: var(--text-primary);
+  font-size: 1.1rem;
+  line-height: 1.35;
+  white-space: nowrap;
+}
+
+/* Títulos como ESTROFA, CORO, etc. */
+.section-title,
+.lyric-section-title {
+  display: block;
+  width: 100%;
+  margin: 1.4rem 0 0.8rem 0;
+  color: var(--text-primary);
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.08rem;
+  text-transform: uppercase;
+}
+
+/* Espacio entre secciones */
+.lyric-spacer {
+  height: 0.7rem;
+}
+/* Cuando se ocultan los acordes, se elimina el espacio superior */
+.lyrics.without-chords .word-group {
+  padding-top: 0;
+}
+
+/* Líneas más compactas cuando no hay acordes */
+.lyrics.without-chords .chord-line-container {
+  margin-bottom: 0.35rem;
+  align-items: baseline;
+}
+
+/* Letra más natural cuando está en modo solo letra */
+.lyrics.without-chords .lyric-text {
+  line-height: 1.45;
+}
+
+/* Ajuste de espacios entre estrofas y coro en modo solo letra */
+.lyrics.without-chords .lyric-spacer {
+  height: 0.45rem;
+}
+/* ===== AJUSTES DE TAMAÑO DE LETRA Y ACORDES ===== */
+
+.lyrics {
+  font-size: var(--lyrics-font-size, 1.1rem);
+}
+
+.lyric-text {
+  font-size: var(--lyrics-font-size, 1.1rem) !important;
+}
+
+.chord-label {
+  font-size: var(--chord-font-size, 0.95rem) !important;
+}
+
+.word-group {
+  padding-top: calc(var(--chord-font-size, 0.95rem) * 1.45) !important;
+}
+
+.lyrics.without-chords .word-group {
+  padding-top: 0 !important;
+}
+
+.lyrics.without-chords .chord-line-container {
+  margin-bottom: 0.35rem !important;
+  align-items: baseline !important;
+}
+
+.lyrics.without-chords .lyric-spacer {
+  height: 0.45rem !important;
+}
+
+/* ===== PÁGINA DE AJUSTES ===== */
+
+.settings-card {
+  background-color: var(--bg-secondary);
+  border-radius: 14px;
+  padding: 1.25rem;
+  margin-bottom: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.settings-card h2 {
+  font-size: 1.05rem;
+  margin-bottom: 1rem;
+  color: var(--accent);
+}
+
+.setting-group {
+  margin-bottom: 1.25rem;
+}
+
+.setting-label-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.6rem;
+}
+
+.setting-label-row label {
+  font-weight: 700;
+}
+
+.setting-label-row span {
+  color: var(--accent);
+  font-weight: 800;
+}
+
+.setting-range {
+  width: 100%;
+  accent-color: var(--accent);
+  cursor: pointer;
+}
+
+.toggle-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+}
+
+.toggle-row p {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  margin-top: 0.35rem;
+}
+
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 52px;
+  height: 30px;
+  flex-shrink: 0;
+}
+
+.toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggle-switch span {
+  position: absolute;
+  cursor: pointer;
+  inset: 0;
+  background-color: var(--bg-card);
+  border-radius: 999px;
+  transition: 0.2s;
+}
+
+.toggle-switch span::before {
+  position: absolute;
+  content: "";
+  height: 24px;
+  width: 24px;
+  left: 3px;
+  top: 3px;
+  background-color: var(--text-primary);
+  border-radius: 50%;
+  transition: 0.2s;
+}
+
+.toggle-switch input:checked + span {
+  background-color: var(--accent);
+}
+
+.toggle-switch input:checked + span::before {
+  transform: translateX(22px);
+  background-color: #070B19;
+}
+
+.contact-link {
+  display: inline-block;
+  margin-top: 0.7rem;
+  color: var(--accent);
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.settings-warning {
+  color: var(--accent) !important;
+  font-size: 0.85rem !important;
+}
+
+.settings-muted {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+/* ===== VISTA PREVIA EN AJUSTES ===== */
+
+.settings-preview {
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 12px;
+  background-color: var(--bg-primary);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.preview-title {
+  color: var(--text-secondary);
+  font-size: 0.82rem;
+  margin-bottom: 0.8rem;
+  font-weight: 700;
+}
+
+.preview-lyrics-text {
+  color: var(--text-primary);
+  font-size: var(--preview-font-size, 1.1rem);
+  line-height: 1.45;
+}
+
+.preview-chord-line {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+}
+
+.preview-word {
+  position: relative;
+  display: inline-block;
+  padding-top: calc(var(--preview-chord-size, 0.95rem) * 1.45);
+  white-space: nowrap;
+}
+
+.preview-chord {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: var(--chord-color);
+  font-size: var(--preview-chord-size, 0.95rem);
+  font-weight: 800;
+  line-height: 1.1rem;
+}
+
+.empty-preview-chord {
+  visibility: hidden;
+}
+
+.preview-text {
+  color: var(--text-primary);
+  font-size: var(--preview-font-size, 1.1rem);
+  line-height: 1.35;
+}
+
+.preview-space {
+  display: inline-block;
+  width: 0.35em;
+}
+
+/* ===== ACERCA DE ===== */
+
+.about-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.about-row span {
+  color: var(--text-secondary);
+}
+
+.about-row strong {
+  text-align: right;
+  color: var(--text-primary);
+}
+
+/* Firma final tipo marca de agua */
+.developer-watermark {
+  text-align: center;
+  margin: 2rem 0 1rem 0;
+  color: rgba(248, 250, 252, 0.28);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.04rem;
+}
+/* ===== TEMA CLARO / OSCURO ===== */
+
+:root {
+  color-scheme: dark;
+}
+
+[data-theme="light"] {
+  color-scheme: light;
+
+  --bg-primary: #F8FAFC;
+  --bg-secondary: #FFFFFF;
+  --bg-card: #E2E8F0;
+  --text-primary: #0F172A;
+  --text-secondary: #475569;
+  --accent: #B45309;
+  --accent-hover: #D97706;
+  --chord-color: #B45309;
+  --danger: #DC2626;
+}
+
+[data-theme="light"] body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+[data-theme="light"] .app-container {
+  box-shadow: 0 0 20px rgba(15, 23, 42, 0.12);
+}
+
+[data-theme="light"] .song-item,
+[data-theme="light"] .settings-card,
+[data-theme="light"] .controls-bar,
+[data-theme="light"] .search-input,
+[data-theme="light"] .filter-select {
+  border: 1px solid rgba(15, 23, 42, 0.08);
+}
+
+[data-theme="light"] .category-badge {
+  background-color: #FEF3C7;
+  color: #92400E;
+}
+
+[data-theme="light"] .btn {
+  background-color: #E2E8F0;
+  color: #0F172A;
+}
+
+[data-theme="light"] .btn:hover {
+  background-color: var(--accent);
+  color: #FFFFFF;
+}
+
+[data-theme="light"] .bottom-nav {
+  background-color: #FFFFFF;
+  border-top: 1px solid rgba(15, 23, 42, 0.08);
+}
+/* ===== SELECTOR DE APARIENCIA ===== */
+
+.theme-options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.8rem;
+  margin-top: 1rem;
+}
+
+.theme-option {
+  background-color: var(--bg-primary);
+  border: 2px solid transparent;
+  color: var(--text-primary);
+  border-radius: 14px;
+  padding: 1rem;
+  cursor: pointer;
+  text-align: center;
+  font-family: inherit;
+  transition: 0.2s;
+}
+
+.theme-option.active {
+  border-color: var(--accent);
+}
+
+.theme-option strong {
+  display: block;
+  margin-top: 0.6rem;
+}
+
+.theme-preview {
+  display: block;
+  width: 100%;
+  height: 55px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.dark-preview {
+  background: linear-gradient(135deg, #070B19 0%, #1E293B 100%);
+}
+
+.light-preview {
+  background: linear-gradient(135deg, #FFFFFF 0%, #E2E8F0 100%);
+}
+[data-theme="light"] .developer-watermark {
+  color: rgba(15, 23, 42, 0.45);
+}
+
+[data-theme="dark"] .developer-watermark {
+  color: rgba(248, 250, 252, 0.28);
+}
+/* ===== SELECTOR DE ESCALA DE ACORDES ===== */
+
+.notation-options {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.notation-option {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  border: 2px solid transparent;
+  border-radius: 14px;
+  padding: 1rem;
+  text-align: left;
+  cursor: pointer;
+  font-family: inherit;
+  transition: 0.2s;
+}
+
+.notation-option.active {
+  border-color: var(--accent);
+}
+
+.notation-option strong {
+  display: block;
+  color: var(--accent);
+  margin-bottom: 0.35rem;
+}
+
+.notation-option span {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+/* ===== ENCABEZADO CENTRADO DEL HIMNO ===== */
+
+.song-viewer-title {
+  flex: 1;
+  text-align: center;
+  margin: 0 1rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.song-type-label {
+  width: 100%;
+  text-align: center;
+  color: var(--accent);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.08rem;
+  text-transform: uppercase;
+  margin-bottom: 0.15rem;
+}
+
+.song-viewer-title h1 {
+  width: 100%;
+  text-align: center;
+  font-size: 1.08rem;
+  line-height: 1.2;
+  margin: 0;
+  color: var(--text-primary);
+  white-space: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.song-key-line {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.25rem;
+  color: var(--text-secondary);
+  font-size: 0.78rem;
+  font-weight: 700;
+  margin-top: 0.25rem;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+.song-note-symbol {
+  color: var(--accent);
+  font-size: 0.9rem;
+  line-height: 1;
+}
+/* ===== TÍTULOS DE ESTROFA / CORO ELEGANTES ===== */
+
+.section-title {
+  text-align: center !important;
+  color: var(--accent) !important;
+  font-weight: 800 !important;
+  font-size: 1rem !important;
+  letter-spacing: 0.08rem !important;
+  text-transform: uppercase !important;
+  margin: 1.8rem 0 1rem 0 !important;
+  position: relative !important;
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 45px;
+  height: 2px;
+  background-color: var(--accent);
+  margin: 0.35rem auto 0 auto;
+  border-radius: 999px;
+  opacity: 0.8;
+}
+/* ===== BOTÓN MOSTRAR / OCULTAR ACORDES ===== */
+
+.chord-toggle-btn {
+  background-color: var(--bg-card) !important;
+  color: var(--text-primary) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+.chord-toggle-btn.active {
+  background-color: var(--accent) !important;
+  color: #ffffff !important;
+  border-color: var(--accent) !important;
+}
+
+.chord-toggle-btn:not(.active):hover,
+.chord-toggle-btn:not(.active):focus,
+.chord-toggle-btn:not(.active):active {
+  background-color: var(--bg-card) !important;
+  color: var(--text-primary) !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+[data-theme="light"] .chord-toggle-btn {
+  border-color: rgba(15, 23, 42, 0.12) !important;
+}
+
+[data-theme="light"] .chord-toggle-btn:not(.active):hover,
+[data-theme="light"] .chord-toggle-btn:not(.active):focus,
+[data-theme="light"] .chord-toggle-btn:not(.active):active {
+  border-color: rgba(15, 23, 42, 0.12) !important;
+}
