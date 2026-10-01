@@ -6119,4 +6119,157 @@ FINAL
 [Am]en la oscuri[Bb]dad…
 [G]brilla tu ver[C]dad…`
 },
+{
+  id: 805,
+  number: 6,
+  title: 'Tumba a Jardines',
+  key: 'Re mayor (D)',
+  time: '4 tiempos',
+  category: 'Adoración',
+  isSpecial: true,
+  specialType: 'especial',
+  artist: 'Especial',
+  lyrics: `INTRODUCCIÓN
+
+Bm, G, D, A, Bm, G, D, A, D, G, D
+
+ESTROFA 1
+
+[D]El mundo, busqué
+Y no pudo [G]llenar[D]me
+
+Ningún [Bm7]tesoro que pueda ga[A]nar
+Me sacia[G]rá
+
+Mas llegaste [D]tú
+Me diste [G]vida [D]nueva
+
+Y cada [Bm7]deseo se cumpli[A]rá
+Aquí en tu [G]amor.
+
+CORO
+
+[D]Oh, no hay nada
+Nada mejor
+
+[Bm7]No hay nada
+Nada mejor
+
+[G]No hay nada
+Nada mejor que mi [D]Dios
+
+ESTROFA 2
+
+[G]Vengo a [D]ti
+Sin miedo, [G]sin re[D]servas
+
+Cada [Bm7]fracaso has visto, Se[A]ñor
+Y aún tu amigo [G]soy
+
+Porque el Dios de los [D]montes
+Es el [G]Dios de los [D]valles
+
+No hay [Bm7]lugar, no hay lugar
+Que me pueda ale[A]jar
+De tu gracia y [G]amor
+
+CORO
+
+[D]Oh, no hay nada
+Nada mejor
+
+[Bm7]No hay nada
+Nada mejor
+
+[G]No hay nada
+Nada mejor que mi [D]Dios
+
+[D]Oh, no hay nada
+Nada mejor
+
+[Bm7]No hay nada
+Nada mejor
+
+[G]No hay nada
+Nada mejor que mi [D]Dios
+
+INTERLUDIO
+
+Bm7, G, D, A, Bm7, G, D, A
+
+PUENTE
+
+[D]Cambias lamento en danza
+[G] [G] [G] [D]
+
+[D]De cenizas, traes vida
+[G] [G] [G] [D]
+
+[D]Cambias culpa por gloria
+Sé que [Bm]solo [G]Tú lo ha[D]rás
+
+[D]Cambias lamento en danza
+[G] [G] [G] [D]
+
+[D]De cenizas, traes vida
+[G] [G] [G] [D]
+
+[D]Cambias culpa por gloria
+Sé que [Bm]solo [G]Tú lo ha[D]rás
+
+PUENTE 2
+
+[D]De las ruinas y tumbas
+[G] [G] [G] [D]
+
+[D]Nacen nuevos jardines
+[G] [G] [G] [D]
+
+[D]Resucitas los huesos
+Sé que [Bm]solo [G]Tú lo ha[D]rás
+Sé que [Bm]solo [G]Tú lo ha[D]rás
+
+CORO
+
+[D]Oh, no hay nada
+Nada mejor
+
+[Bm7]No hay nada
+Nada mejor
+
+[G]No hay nada
+Nada mejor que mi [D]Dios
+
+[D]Oh, no hay nada
+Nada mejor
+
+[Bm7]No hay nada
+Nada mejor
+
+[G]No hay nada
+Nada mejor que mi [D]Dios
+
+FINAL
+
+[D]De las ruinas y tumbas
+[G] [G] [G] [D]
+
+[D]Nacen nuevos jardines
+[G] [G] [G] [D]
+
+[D]Resucitas los huesos
+Sé que [Bm]solo [G]Tú lo ha[D]rás
+
+[D]De las ruinas y tumbas
+[G] [G] [G] [D]
+
+[D]Nacen nuevos jardines
+[G] [G] [G] [D]
+
+[D]Resucitas los huesos
+Sé que [Bm]solo [G]Tú lo ha[D]rás
+
+Sé que [Bm]solo [G]Tú lo ha[D]rás
+Sé que [Bm]solo [G]Tú lo ha[D]rás`
+}
 ]
